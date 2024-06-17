@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Props = {
   urlToImage: string;
@@ -10,7 +11,7 @@ type Props = {
 
 const TopNews = (props: Props) => {
   return (
-    <div className="relative h-[28rem] w-96 bg-gradient-to-r from-gray-300 via-white to-gray-300 p-8 rounded-t-2xl rounded-r-2xl overflow-hidden">
+    <div className="group relative h-[28rem] w-96 bg-gradient-to-r from-gray-300 via-white to-gray-300 p-8 rounded-t-2xl rounded-r-2xl pverflow-hidden hover:cursor-pointer">
       <Image
         src={props.urlToImage}
         alt={props.title}
@@ -25,10 +26,17 @@ const TopNews = (props: Props) => {
           {props.title}
         </Link>
       </h3>
-      <div className="border-l-8 border-red-600 z-20 absolute left-0 px-2 text-2xl bottom-0 max-h-16 overflow-hidden bg-white">
+      <div className="border-l-8 border-red-600 z-20 absolute left-0 px-2 text-sm bottom-0 max-h-16 overflow-hidden bg-white">
         <div>{props.description}</div>
-        
       </div>
+      <motion.div
+        initial={{ y: 30, opacity: 0}}
+        whileHover={{ y: 0, opacity: 1}}
+        transition={{ duration: 0.2 }}
+        className=" absolute z-20 w-full h-full group-hover:scale-105 bg-black/60 flex top-0 left-0 text-white items-center justify-center p-8"
+      >
+        <div>Read More!</div>
+      </motion.div>
     </div>
   );
 };

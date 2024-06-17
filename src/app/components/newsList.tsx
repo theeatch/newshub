@@ -31,7 +31,7 @@ const NewsList = (props: Props) => {
     fetchArticles();
   }, [API_KEY]);
   return (
-    <div className="w-full items-center flex flex-col h-full">
+    <div className="w-full items-center flex flex-col h-full ">
       <div className="flex flex-col w-full gap-10 pb-10">
         <h1 className="text-7xl font-bold tracking-tight mx-auto underline">Headlines of Today! </h1>
         <div className="flex w-full justify-around">

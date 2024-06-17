@@ -48,7 +48,7 @@ const NewsList = (props: Props) => {
       </div>
       <div className="flex flex-col w-full gap-10">
             <h1 className="text-4xl font-semibold text-black/70 mx-auto">Read more happenings</h1>
-        <div className="w-full flex flex-wrap">
+        <div className="w-full flex flex-wrap justify-around gap-y-10">
         {articles.reverse().map((article, index) => (
           <NewsItem
             key={index}

@@ -4,7 +4,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <div className="w-full h-36 flex justify-center items-center top-0 sticky bg-white/80 z-50">
+    <div className="w-full h-36 flex justify-center items-center top-0 sticky bg-white/80 z-50 backdrop-filter backdrop-blur-sm">
       <div className="flex flex-col justify-center">
         <div className="flex">
           <Image
